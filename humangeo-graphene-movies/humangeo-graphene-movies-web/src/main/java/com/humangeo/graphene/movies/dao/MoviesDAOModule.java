@@ -1,5 +1,6 @@
-package graphene.walker.dao;
+package com.humangeo.graphene.movies.dao;
 
+import com.humangeo.graphene.movies.model.funnels.MoviesEntityLightFunnel;
 import graphene.dao.CombinedDAO;
 import graphene.dao.DataSourceListDAO;
 import graphene.dao.EntityDAO;
@@ -30,13 +31,14 @@ import graphene.dao.sql.DAOSQLModule;
 import graphene.model.Funnel;
 import graphene.model.idl.G_SymbolConstants;
 import graphene.model.memorydb.IMemoryDB;
-import graphene.services.EntityDAOImpl;
+import com.humangeo.graphene.movies.dao.impl.EntityDAOImpl;
+import graphene.model.view.entities.DefaultEntityLightFunnel;
 import graphene.services.SimplePermissionDAOImpl;
 import graphene.services.SimpleRoleDAOImpl;
 import graphene.util.FastNumberUtils;
 import graphene.util.PropertiesFileSymbolProvider;
 import graphene.util.db.JDBCUtil;
-import graphene.walker.dao.impl.DataSourceListDAOImpl;
+import com.humangeo.graphene.movies.dao.impl.DataSourceListDAOImpl;
 
 import org.apache.tapestry5.ioc.Configuration;
 import org.apache.tapestry5.ioc.Invokable;
@@ -59,11 +61,11 @@ import org.slf4j.LoggerFactory;
  * @author djue
  * 
  */
-@SubModule({ DAOSQLModule.class, DAONeo4JEModule.class })
-public class WalkerDAOModule {
+@SubModule({ DAONeo4JEModule.class })
+public class MoviesDAOModule {
 
 	private static Logger logger = LoggerFactory
-			.getLogger(WalkerDAOModule.class);
+			.getLogger(MoviesDAOModule.class);
 
 	public static void bind(ServiceBinder binder) {
 		binder.bind(RoleDAO.class, SimpleRoleDAOImpl.class);
@@ -75,8 +77,8 @@ public class WalkerDAOModule {
 		// distributed configuration!)
 		binder.bind(DataSourceListDAO.class, DataSourceListDAOImpl.class);
 
-		// binder.bind(Funnel.class, DefaultEntityLightFunnel.class).withMarker(
-		// EntityLightFunnelMarker.class);
+		binder.bind(Funnel.class, MoviesEntityLightFunnel.class).withMarker(EntityLightFunnelMarker.class);
+
 		// Wiring for user services
 		binder.bind(EntityGraphDAO.class, EntityGraphDAONeo4JEImpl.class);
 		binder.bind(GroupDAO.class, GroupDAONeo4JEImpl.class);

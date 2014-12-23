@@ -4,7 +4,7 @@ import graphene.model.idl.G_SymbolConstants;
 import graphene.rest.services.RestModule;
 import graphene.util.PropertiesFileSymbolProvider;
 import graphene.util.UtilModule;
-import graphene.walker.dao.WalkerDAOModule;
+import com.humangeo.graphene.movies.dao.MoviesDAOModule;
 //import graphene.walker.model.graphserver.GraphServerModule;
 //import graphene.web.security.ShiroSecurityModule;
 import graphene.web.security.NoSecurityModule;
@@ -26,7 +26,7 @@ import org.tynamo.security.SecuritySymbols;
  * it's a good place to configure and extend Tapestry, or to place your own
  * service definitions.
  */
-@SubModule({ WalkerDAOModule.class, AppRestModule.class,
+@SubModule({ MoviesDAOModule.class, AppRestModule.class,
 		/*GraphServerModule.class,*/ GrapheneModule.class, RestModule.class,
 		UtilModule.class, /* ShiroSecurityModule.class */NoSecurityModule.class })
 public class AppModule {

@@ -6,7 +6,7 @@ import graphene.dao.PermissionDAO;
 import graphene.dao.RoleDAO;
 import graphene.dao.annotations.EntityLightFunnelMarker;
 import graphene.dao.sql.DAOSQLModule;
-import graphene.walker.dao.impl.DataSourceListDAOImpl;
+import com.humangeo.graphene.movies.dao.impl.DataSourceListDAOImpl;
 //import graphene.walker.dao.impl.EntityRefDAOImpl;
 //import graphene.walker.dao.impl.IdTypeDAOSQLImpl;
 //import graphene.walker.dao.impl.TransactionDAOSQLImpl;

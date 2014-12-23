@@ -43,34 +43,43 @@ public class EntityServerRSImpl implements EntityServerRS {
 	public EntitySearchResults advancedSearch(
 			@QueryParam("jsonSearch") String jsonSearch) {
 		TimeReporter t = new TimeReporter("advancedSearch", logger);
+
 		logger.trace("json search: " + jsonSearch);
+
 		ObjectMapper mapper = new ObjectMapper();
+
 		byte[] bytes = jsonSearch.getBytes();
+
 		AdvancedSearch search = null;
+
 		try {
-			search = mapper.readValue(bytes, 0, bytes.length,
-					AdvancedSearch.class);
+			search = mapper.readValue(bytes, 0, bytes.length, AdvancedSearch.class);
 		} catch (JsonParseException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (JsonMappingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+
 		EntitySearchResults results = new EntitySearchResults();
+
 		if (search == null) {
 			logger.debug("json parse failed");
+
 			results = null;
 		} else {
-			logger.trace(search.getDataSet());
+			System.out.println(search.getDataSet());
+
 			search.setFieldsIntoFilters(dataSourceListDAO.getList());
+
 			List<EntityLight> entities = entitydao.getLightEntitiesByAdvancedSearch(search);
+
 			results.addEntities(entities);
 		}
+
 		t.logAsCompleted();
+
 		return results;
 	}
 

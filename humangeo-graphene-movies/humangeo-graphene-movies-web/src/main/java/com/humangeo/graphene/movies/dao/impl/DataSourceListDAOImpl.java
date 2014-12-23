@@ -1,4 +1,4 @@
-package graphene.walker.dao.impl;
+package com.humangeo.graphene.movies.dao.impl;
 
 import graphene.dao.DataSourceListDAO;
 import graphene.model.datasourcedescriptors.DataSet;
@@ -29,45 +29,42 @@ public class DataSourceListDAOImpl implements DataSourceListDAO {
 	 * 
 	 */
 	public DataSourceList getList() {
-		if (dataSourceList == null)
-			dataSourceList = loadList();
+		if (dataSourceList == null) {
+			loadList();
+		}
 
 		return dataSourceList;
 	}
 
-	private DataSourceList loadList() {
+	private void loadList() {
 		DataSourceList list = new DataSourceList();
-		// such datasource
-		list.addSource(makeWalker());
-		// add more data sources here if you want. wow.
-		return list;
+
+		list.addSource(buildMovies());
+
+		// add more data sources here if you want
+
+		dataSourceList = list;
 	}
 
-	private DataSource makeWalker() {
+	private DataSource buildMovies() {
 		DataSource dataSource = new DataSource();
-		DataSet ds = new DataSet();
+		DataSet dataSet = new DataSet();
 
-		dataSource.setId("Walker");
-		dataSource.setName("Walker");
-		dataSource.setFriendlyName("Walker Email List");
+		dataSource.setId("Movies");
+		dataSource.setName("Movies");
+		dataSource.setFriendlyName("Movie List");
 
 		dataSource.addProperty("Country", "USA");
 
-		ds.setName("Entities");
-		ds.setEntity(true);
-		ds.setTransaction(false);
+		dataSet.setName("Entities");
+		dataSet.setEntity(true);
+		dataSet.setTransaction(false);
 
 		//TODO expand with more fields
-		
-		ds.addField(new DataSetField("name", "Name", "string", false, true, true));
-		ds.addField(new DataSetField("email", "Email Address", "string", false, true, true));
-		dataSource.addDataSet(ds);
+		dataSet.addField(new DataSetField("name", "Actor Name", "string", false, true, true));
+		dataSet.addField(new DataSetField("title", "Movie Title", "string", false, true, true));
 
-		ds = new DataSet();
-		ds.setName("Emails");
-		ds.setEntity(false);
-		ds.setTransaction(true);
-		dataSource.addDataSet(ds);
+		dataSource.addDataSet(dataSet);
 
 		return dataSource;
 	}
