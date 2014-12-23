@@ -9,7 +9,6 @@ import graphene.dao.neo4j.annotations.DataGraph;
 import graphene.model.Funnel;
 import graphene.model.idl.*;
 import graphene.model.idlhelper.EntityHelper;
-import graphene.model.idlhelper.PropertyHelper;
 import graphene.model.query.AdvancedSearch;
 import graphene.model.query.EventQuery;
 import graphene.model.query.SearchFilter;
@@ -25,9 +24,15 @@ import scala.collection.Iterator;
 
 import java.io.File;
 import java.util.*;
-import java.util.Map;
 
 /**
+ * This class helps gather entities to return to the UI.  A EntityDAO should normally only be implemented once
+ * because of how Graphene is using the EntityDAO class.  Therefore, logic regarding multiple entities in the
+ * database need to be condensed to this one class.
+ *
+ * EXAMPLE: In this class you will see references to Actor and Movie classes to represent the data in the
+ * movie database.
+ *
  * Created by bparrish on 12/23/14.
  */
 public class EntityDAOImpl implements EntityDAO {
@@ -59,11 +64,12 @@ public class EntityDAOImpl implements EntityDAO {
 
         for (SearchFilter filter : search.getFilters()) {
             String fieldName = filter.getFieldName();
+            String fieldValue = filter.getValue();
 
             if (fieldName.equals("name")) {
-                cypherQuery = "MATCH (n:`Person`) WHERE has(n.`name`) RETURN (n)";
+                cypherQuery = "MATCH (n:`Person`) WHERE has(n.`name`) AND n.`name` =~ '(?i).*" + fieldValue + ".*' RETURN (n)";
             } else if (fieldName.equals("title")) {
-                cypherQuery = "MATCH (n:`Movie`) WHERE has(n.`title`) RETURN (n)";
+                cypherQuery = "MATCH (n:`Movie`) WHERE has(n.`title`) AND n.`title` =~ '(?i).*" + fieldValue + ".*' RETURN (n)";
             } else {
                 return null;
             }
@@ -80,7 +86,7 @@ public class EntityDAOImpl implements EntityDAO {
                 try {
                     List<G_EntityTag> tagList = new ArrayList<G_EntityTag>(1);
                     tagList.add(G_EntityTag.FILE);
-                    G_Provenance prov = new G_Provenance(search.getSource());
+                    G_Provenance provenance = new G_Provenance(search.getSource());
                     G_Uncertainty uncertainty = new G_Uncertainty(1.0d);
 
                     G_Entity entity = null;
@@ -88,15 +94,21 @@ public class EntityDAOImpl implements EntityDAO {
                     if (fieldName.equals("name")) {
                         Actor actor = new Actor(node);
 
-                        G_Property property = new PropertyHelper(G_PropertyTag.LABEL, actor.getName());
-                        entity = new EntityHelper(actor.getName(), tagList, prov, uncertainty, Collections.singletonList(property));
-                        entity.setUid(actor.getName());
+                        entity = new EntityHelper(
+                                "" + node.getId(),
+                                tagList,
+                                provenance,
+                                uncertainty,
+                                actor.getProperties(provenance, uncertainty));
                     } else if (fieldName.equals("title")) {
                         Movie movie = new Movie(node);
 
-                        G_Property property = new PropertyHelper(G_PropertyTag.LABEL, movie.getTitle());
-                        entity = new EntityHelper(movie.getTitle(), tagList, prov, uncertainty, Collections.singletonList(property));
-                        entity.setUid(movie.getTitle());
+                        entity = new EntityHelper(
+                                "" + node.getId(),
+                                tagList,
+                                provenance,
+                                uncertainty,
+                                movie.getProperties(provenance, uncertainty));
                     }
 
                     results.add(entity);

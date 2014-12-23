@@ -3,148 +3,148 @@
 <html>
 
 <head>
-	<title> Graphene Web Demo: Movies, Version 4.1.0 </title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title> Graphene Web Demo: Walker Emails, Version 4.1.0 </title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<!-- CSS -->
+	<!-- CSS -->
 	<!-- MFM COMMENTED OUT <link type="text/css" href="resources/css/cssjit/base.css" rel="stylesheet" /> -->
 	<!-- <link type="text/css" href="core/resources/css/cssjit/ForceDirected.css" rel="stylesheet" /> -->
 	<link type="text/css" href="core/js/libs/extjs/resources/css/ext-all.css"  rel="stylesheet"  />
 	<link type="text/css" href="core/js/libs/extjs/ux/css/CheckHeader.css"  rel="stylesheet"  />
 	<link type="text/css" href="core/js/libs/leaflet-0.7.3/leaflet.css" rel="stylesheet" />
 
-    <style type="text/css">
+	<style type="text/css">
 		x-grid-cell-first {
-			overflow: hidden;
-			-o-text-overflow: ellipsis;
-			text-overflow: ellipsis;
-			padding: 2px 6px 3px;
-			white-space: nowrap; 
+		overflow: hidden;
+		-o-text-overflow: ellipsis;
+		text-overflow: ellipsis;
+		padding: 2px 6px 3px;
+		white-space: nowrap;
 		}
-		
+
 		#EntityGraph {
-			background-color: lightyellow;
-			color: 'black';
+		background-color: lightyellow;
+		color: 'black';
 		}
-		
+
 		#TransfersGraph {
-			background-color: lightyellow;
-			color: 'black';
+		background-color: lightyellow;
+		color: 'black';
 		}
-		
+
 		x-busy-tab {
-			background-color: lightyellow;
+		background-color: lightyellow;
 		}
-		
+
 		x-hasdata-tab {
-			background-color: red;
-			color: white;
+		background-color: red;
+		color: white;
 		}
-		
+
 		x-nodata-tab {
-			background-color: lightblue;
+		background-color: lightblue;
 		}
-		
+
 		.groupcolor0 .account{
-			color:black;
+		color:black;
 		}
-		
+
 		.groupcolor1  .account{
-			color: red;
+		color: red;
 		}
-		
+
 		.groupcolor2  .account{
-			color: blue;
+		color: blue;
 		}
-		
+
 		.groupcolor3  .account{
-			color: green;
+		color: green;
 		}
-		
+
 		.groupcolor4  .account{
-			color: orange;
+		color: orange;
 		}
-		
+
 		.bars rect {
-			fill: steelblue;
+		fill: steelblue;
 		}
-		
+
 		.axis text {
-			font: 10px sans-serif;
+		font: 10px sans-serif;
 		}
-		
+
 		.axis path, .axis line {
-			fill: none;
-			stroke: #000;
-			shape-rendering: crispEdges;
+		fill: none;
+		stroke: #000;
+		shape-rendering: crispEdges;
 		}
-		 
+
 		.grid .tick {
-			stroke: lightgrey;
-			stroke-opacity: 0.75;
+		stroke: lightgrey;
+		stroke-opacity: 0.75;
 		}
 
 		.grid_default_btn {
-			background-position: center center;
-			background-image: url(/graphene-walker-web/core/images/grid_icon.png) !important;
+		background-position: center center;
+		background-image: url(/graphene-walker-web/core/images/grid_icon.png) !important;
 		}
 
 		.hierarch_circle_btn {
-			background-position: center center;
-			background-image : url(/graphene-walker-web/core/images/hierarchy_circle_icon.png) !important;
+		background-position: center center;
+		background-image : url(/graphene-walker-web/core/images/hierarchy_circle_icon.png) !important;
 		}
 
 		.hierarch_default_btn {
-			background-position: center center;
-			background-image : url(/graphene-walker-web/core/images/hierarchy_icon.png) !important;
+		background-position: center center;
+		background-image : url(/graphene-walker-web/core/images/hierarchy_icon.png) !important;
 		}
 
 		.cose_anim_btn {
-			background-position: center center;
-			background-image : url(/graphene-walker-web/core/images/cose_animated_icon.png) !important;
+		background-position: center center;
+		background-image : url(/graphene-walker-web/core/images/cose_animated_icon.png) !important;
 		}
 
 		.cose_unanim_btn {
-			background-position: center center;
-			background-image : url(/graphene-walker-web/core/images/cose_icon.png) !important;
+		background-position: center center;
+		background-image : url(/graphene-walker-web/core/images/cose_icon.png) !important;
 		}
 
 		.arbor_anim_btn {
-			background-position: center center;
-			background-image : url(/graphene-walker-web/core/images/arbor_animated_icon.png) !important;
+		background-position: center center;
+		background-image : url(/graphene-walker-web/core/images/arbor_animated_icon.png) !important;
 		}
 
 		.arbor_unanim_btn {
-			background-position: center center;
-			background-image : url(/graphene-walker-web/core/images/arbor_icon.png) !important;
+		background-position: center center;
+		background-image : url(/graphene-walker-web/core/images/arbor_icon.png) !important;
 		}
 
 		.arbor_wheel_anim_btn {
-			background-position: center center;
-			background-image : url(/graphene-walker-web/core/images/arbor_wheel_animated_icon.png) !important;
+		background-position: center center;
+		background-image : url(/graphene-walker-web/core/images/arbor_wheel_animated_icon.png) !important;
 		}
 
 		.arbor_wheel_unanim_btn {
-			background-position: center center;
-			background-image : url(/graphene-walker-web/core/images/arbor_wheel_icon.png) !important;
+		background-position: center center;
+		background-image : url(/graphene-walker-web/core/images/arbor_wheel_icon.png) !important;
 		}
-		
+
 		.toolbar_help_btn {
-			background-position: center center;
-			background-image : url(/graphene-walker-web/core/images/HelpIcon_solid.gif) !important
+		background-position: center center;
+		background-image : url(/graphene-walker-web/core/images/HelpIcon_solid.gif) !important
 		}
-    </style>
+	</style>
 
 	<!-- THIRD PARTY -->
-    <script type="text/javascript" src="core/js/libs/extjs/ext-all-debug.js"></script>
-    <script type="text/javascript" src="core/js/libs/extjs/ux/CheckColumn.js"></script>
-    <script type="text/javascript" src="core/js/libs/d3/d3.v2.js"></script>
-    
-    <!-- Debug version of leaflet.js -->
-    <script type="text/javascript" src="core/js/libs/leaflet-0.7.3/leaflet-src.js"></script>
+	<script type="text/javascript" src="core/js/libs/extjs/ext-all-debug.js"></script>
+	<script type="text/javascript" src="core/js/libs/extjs/ux/CheckColumn.js"></script>
+	<script type="text/javascript" src="core/js/libs/d3/d3.v2.js"></script>
 
-	 <!-- Cytoscape.js library for the Graph -->
+	<!-- Debug version of leaflet.js -->
+	<script type="text/javascript" src="core/js/libs/leaflet-0.7.3/leaflet-src.js"></script>
+
+	<!-- Cytoscape.js library for the Graph -->
 	<script src="core/js/libs/jquery/jquery-2.0.3.js"></script>
 	<script src="core/js/libs/cytoscape-2.2.12/cytoscape.js"></script>
 	<script src="core/js/libs/cytoscape-2.2.12/cytoscape.js-cxtmenu.js"></script>
@@ -237,7 +237,7 @@
 	<script type="text/javascript" src="core/js/cmp/shared/RadialContextMenu.js"></script>
 	<script type="text/javascript" src="core/js/cmp/shared/NodeEditor.js"></script>
 	<script type="text/javascript" src="core/js/cmp/shared/NodeMergeDialog.js"></script>
-	
+
 	<!-- Shared tools overrides -->
 	<script type="text/javascript" src="js/shared/interactiond3.js"></script>
 	<script type="text/javascript" src="js/shared/scatterplotd3.js"></script>
@@ -605,13 +605,13 @@
                 }
 
 	</script>
-	
+
 	<!-- Might not be using these two anymore -->
-    <script type="text/javascript" src="CSEARCH/js/CS_Search.js"></script>
+	<script type="text/javascript" src="CSEARCH/js/CS_Search.js"></script>
 	<script type="text/javascript" src="CSEARCH/js/CS_Frame.js"></script>
 
 	<script type="text/javascript" src="core/js/cmp/datasets/js/dataSourceLister.js"></script>
-	
+
 	<!-- Entity Search common -->
 	<script type="text/javascript" src="core/js/cmp/entitysearch/js/Entity_Search.js"></script>
 	<script type="text/javascript" src="core/js/cmp/entitysearch/js/Entity_List_Grid.js"></script>
@@ -619,32 +619,32 @@
 	<script type="text/javascript" src="core/js/cmp/entitysearch/js/Entity_Search_Frame.js"></script>
 
 	<!-- TransactionsGrid common -->
-    <script type="text/javascript" src="core/js/cmp/TransactionsGrid/js/TXN_HeaderPanel.js"></script>
-    <script type="text/javascript" src="core/js/cmp/TransactionsGrid/js/TXN_Menu.js"></script>
-    <script type="text/javascript" src="core/js/cmp/TransactionsGrid/js/TXN_Grid.js"></script>
-    <script type="text/javascript" src="core/js/cmp/TransactionsGrid/js/TXN_Search.js"></script>
+	<script type="text/javascript" src="core/js/cmp/TransactionsGrid/js/TXN_HeaderPanel.js"></script>
+	<script type="text/javascript" src="core/js/cmp/TransactionsGrid/js/TXN_Menu.js"></script>
+	<script type="text/javascript" src="core/js/cmp/TransactionsGrid/js/TXN_Grid.js"></script>
+	<script type="text/javascript" src="core/js/cmp/TransactionsGrid/js/TXN_Search.js"></script>
 	<script type="text/javascript" src="core/js/cmp/TransactionsGrid/js/TXN_Frame.js"></script>
-	
+
 	<!-- TransactionsGrid overrides -->
 	<script type="text/javascript" src="TransactionsGrid/js/TXN_Ledger.js"></script>
-	
+
 	<!-- TransfersGrid common -->
-    <script type="text/javascript" src="core/js/cmp/TransfersGrid/js/Walker_timeline.js"></script>
-    <script type="text/javascript" src="core/js/cmp/TransfersGrid/js/Walker_timelineButtons.js"></script>
-    <script type="text/javascript" src="core/js/cmp/TransfersGrid/js/Walker_timelinePanel.js"></script>
-    <script type="text/javascript" src="core/js/cmp/TransfersGrid/js/TFR_HeaderPanel.js"></script>
-    <script type="text/javascript" src="core/js/cmp/TransfersGrid/js/TFR_Menu.js"></script>
-    <script type="text/javascript" src="core/js/cmp/TransfersGrid/js/TFR_Search.js"></script>
-    <script type="text/javascript" src="core/js/cmp/TransfersGrid/js/TFR_Ledger.js"></script>
-    <script type="text/javascript" src="core/js/cmp/TransfersGrid/js/TFR_Charts.js"></script>
-    <script type="text/javascript" src="core/js/cmp/TransfersGrid/js/TFR_Frame.js"></script>
-	
+	<script type="text/javascript" src="core/js/cmp/TransfersGrid/js/Walker_timeline.js"></script>
+	<script type="text/javascript" src="core/js/cmp/TransfersGrid/js/Walker_timelineButtons.js"></script>
+	<script type="text/javascript" src="core/js/cmp/TransfersGrid/js/Walker_timelinePanel.js"></script>
+	<script type="text/javascript" src="core/js/cmp/TransfersGrid/js/TFR_HeaderPanel.js"></script>
+	<script type="text/javascript" src="core/js/cmp/TransfersGrid/js/TFR_Menu.js"></script>
+	<script type="text/javascript" src="core/js/cmp/TransfersGrid/js/TFR_Search.js"></script>
+	<script type="text/javascript" src="core/js/cmp/TransfersGrid/js/TFR_Ledger.js"></script>
+	<script type="text/javascript" src="core/js/cmp/TransfersGrid/js/TFR_Charts.js"></script>
+	<script type="text/javascript" src="core/js/cmp/TransfersGrid/js/TFR_Frame.js"></script>
+
 	<!-- TransfersGrid overrides -->
-    <script type="text/javascript" src="TransfersGrid/js/TFR_Grid.js"></script>
+	<script type="text/javascript" src="TransfersGrid/js/TFR_Grid.js"></script>
 
 	<!-- EntityGraph common -->
-    <script type="text/javascript" src="core/js/cmp/entitygraph/js/EntityGraphToolBar.js"></script>
-    <script type="text/javascript" src="core/js/cmp/entitygraph/js/EntityGraph.js"></script>
+	<script type="text/javascript" src="core/js/cmp/entitygraph/js/EntityGraphToolBar.js"></script>
+	<script type="text/javascript" src="core/js/cmp/entitygraph/js/EntityGraph.js"></script>
 	<script type="text/javascript" src="core/js/cmp/entitygraph/js/EntityGraphRightPanels.js"></script>
 
 	<!-- TransactionsGraph common -->
@@ -659,7 +659,7 @@
 	<!-- EntityTab common -->
 	<script type="text/javascript" src="core/js/cmp/entitytab/js/EntityDetails.js"></script>
 	<script type="text/javascript" src="core/js/cmp/entitytab/js/entityTab.js"></script>
-	
+
 	<script type="text/javascript" src="core/js/cmp/Map/js/MapPanel.js"></script>
 	<script type="text/javascript" src="core/js/cmp/Map/js/MapToolbar.js"></script>
 	<script type="text/javascript" src="core/js/cmp/Map/js/MapDetailsPanel.js"></script>
