@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/humangeo-graphene-movies.iml" filepath="$PROJECT_DIR$/humangeo-graphene-movies.iml" />
+      <module fileurl="file://$PROJECT_DIR$/humangeo-graphene-movies-web/humangeo-graphene-movies-web.iml" filepath="$PROJECT_DIR$/humangeo-graphene-movies-web/humangeo-graphene-movies-web.iml" />
+    </modules>
+  </component>
+</project>
