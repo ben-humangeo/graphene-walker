@@ -2,7 +2,6 @@ package com.humangeo.graphene.movies.model;
 
 import graphene.model.idl.*;
 import graphene.model.idlhelper.PropertyHelper;
-import org.apache.commons.collections.ListUtils;
 import org.neo4j.graphdb.Node;
 import org.neo4j.graphdb.NotFoundException;
 import org.slf4j.Logger;
@@ -15,9 +14,9 @@ import java.util.List;
 /**
  * Created by bparrish on 12/23/14.
  */
-public class Actor {
+public class Person {
 
-    private Logger _logger = LoggerFactory.getLogger(Actor.class);
+    private Logger _logger = LoggerFactory.getLogger(Person.class);
 
     private String _name;
     private String _birthYear;
@@ -25,7 +24,7 @@ public class Actor {
     private final String NAME = "name";
     private final String BORN = "born";
 
-    public Actor(Node node) {
+    public Person(Node node) {
         try {
             _name = node.getProperty(NAME).toString();
 //            _birthYear = node.getProperty(BORN).toString();
