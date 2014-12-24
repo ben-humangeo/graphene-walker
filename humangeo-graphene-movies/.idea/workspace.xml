@@ -31,25 +31,89 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="movies-bootstrap.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/webapp/movies-bootstrap.html">
+      <file leaf-file-name="PersonGraphBuilderImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/model/graph/PersonGraphBuilderImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.60674155" vertical-offset="129" max-vertical-offset="930">
-              <caret line="41" column="10" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.025597269" vertical-offset="1755" max-vertical-offset="2910">
+              <caret line="147" column="18" selection-start-line="147" selection-start-column="18" selection-end-line="183" selection-end-column="11" />
+              <folding>
+                <element signature="n#!!doc;n#PersonGraphBuilderImpl#0;n#PersonGraphBuilderImpl#0" expanded="false" />
+                <element signature="e#1329#1330#0" expanded="true" />
+                <element signature="e#1359#1360#0" expanded="true" />
+                <element signature="method#performPostProcess#0;class#PersonGraphBuilderImpl#0" expanded="false" />
+                <element signature="e#8711#8712#0" expanded="true" />
+                <element signature="e#8738#8739#0" expanded="true" />
+                <element signature="e#9321#9322#0" expanded="true" />
+                <element signature="e#9349#9350#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PersonDAOImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/dao/impl/PersonDAOImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="885" max-vertical-offset="2595">
+              <caret line="119" column="21" selection-start-line="117" selection-start-column="16" selection-end-line="119" selection-end-column="21" />
+              <folding>
+                <element signature="n#!!doc;n#PersonDAOImpl#0;n#PersonDAOImpl#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PersonRefDAOImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/dao/impl/PersonRefDAOImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2414" max-vertical-offset="3045">
+              <caret line="202" column="31" selection-start-line="202" selection-start-column="31" selection-end-line="202" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="n#!!doc;n#PersonRefDAOImpl#0;n#PersonRefDAOImpl#0" expanded="false" />
+                <element signature="e#4216#4217#0" expanded="true" />
+                <element signature="e#4243#4244#0" expanded="true" />
+                <element signature="e#4437#4438#0" expanded="true" />
+                <element signature="e#4464#4465#0" expanded="true" />
+                <element signature="e#4668#4669#0" expanded="true" />
+                <element signature="e#4695#4696#0" expanded="true" />
+                <element signature="e#5071#5072#0" expanded="true" />
+                <element signature="e#5099#5100#0" expanded="true" />
+                <element signature="e#5209#5210#0" expanded="true" />
+                <element signature="e#5233#5234#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Neo4jCypherQuery.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/dao/neo4j/Neo4jCypherQuery.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2066" max-vertical-offset="3180">
+              <caret line="153" column="30" selection-start-line="153" selection-start-column="30" selection-end-line="153" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="movies.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/webapp/movies.html">
+      <file leaf-file-name="MoviesDAOModule.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/dao/MoviesDAOModule.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="2130">
-              <caret line="139" column="34" selection-start-line="139" selection-start-column="11" selection-end-line="139" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2160">
+              <caret line="69" column="20" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
               <folding>
-                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#script#8;n#head#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#script#37;n#head#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppModule.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/web/services/AppModule.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
+              <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -70,22 +134,38 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/graphene-walker-web/pom.xml" />
         <option value="$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/dao/WalkerDAOModule.java" />
-        <option value="$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/web/services/AppModule.java" />
         <option value="$PROJECT_DIR$/humangeo-graphene-movies-web/src/test/java/com/humangeo/graphene/movies/web/services/TestModule.java" />
         <option value="$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/resources/DataGraph.properties" />
         <option value="$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/dao/impl/DataSourceListDAOImpl.java" />
         <option value="$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/resources/UserGraph.properties" />
         <option value="$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/web/rest/EntityServerRSImpl.java" />
-        <option value="$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/dao/MoviesDAOModule.java" />
         <option value="$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/webapp/movies.html" />
-        <option value="$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/model/Movie.java" />
         <option value="$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/model/funnels/MoviesEntityLightFunnel.java" />
         <option value="$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/webapp/movies-bootstrap.html" />
         <option value="$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/model/Actor.java" />
-        <option value="$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/model/Person.java" />
-        <option value="$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/dao/impl/EntityDAOImpl.java" />
         <option value="$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/model/funnels/ActorGEntityFunnel.java" />
         <option value="$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/model/funnels/PersonGEntityFunnel.java" />
+        <option value="$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/model/graph/PropertyGraphBuilderWalkerImpl.java" />
+        <option value="$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/model/graph/GraphServerModule.java" />
+        <option value="$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/web/services/AppModule.java" />
+        <option value="$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/dao/impl/GenericDAONeo4jImpl.java" />
+        <option value="$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/dao/impl/EntityRefDAOImpl.java" />
+        <option value="$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/dao/impl/EntityDAOImpl.java" />
+        <option value="$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/dao/impl/PersonEntityRefDAOImpl.java" />
+        <option value="$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/dao/Neo4jDAOAccessor.java" />
+        <option value="$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/annotations/Neo4jCypherAccessor.java" />
+        <option value="$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/dao/GenericDAOAccessor.java" />
+        <option value="$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/dao/Neo4jCypherDAOAccessor.java" />
+        <option value="$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/dao/MoviesDAOModule.java" />
+        <option value="$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/dao/neo4j/Neo4jCypherBuilder.java" />
+        <option value="$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/utils/Utils.java" />
+        <option value="$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/utils/RandomUtils.java" />
+        <option value="$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/dao/neo4j/Neo4jCypherQuery.java" />
+        <option value="$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/dao/impl/PersonDAOImpl.java" />
+        <option value="$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/dao/impl/PersonRefDAOImpl.java" />
+        <option value="$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/model/Movie.java" />
+        <option value="$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/model/Person.java" />
+        <option value="$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/model/graph/PersonGraphBuilderImpl.java" />
       </list>
     </option>
   </component>
@@ -97,8 +177,29 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="x" value="1441" />
+    <option name="y" value="23" />
+    <option name="width" value="1920" />
+    <option name="height" value="1057" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Javadoc issues</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>JavaDoc</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -123,7 +224,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -149,46 +249,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="humangeo-graphene-movies" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="humangeo-graphene-movies-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="graphene-walker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="humangeo-graphene-movies" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="humangeo-graphene-movies-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="graphene-walker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="humangeo-graphene-movies" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="humangeo-graphene-movies-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -466,7 +526,79 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="graphene-walker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="humangeo-graphene-movies" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="humangeo-graphene-movies-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="movies" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="graphene-walker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="humangeo-graphene-movies" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="humangeo-graphene-movies-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="movies" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="graph" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -576,13 +708,86 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="neo4j" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="graphene-walker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="humangeo-graphene-movies" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="humangeo-graphene-movies-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="movies" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="graphene-walker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="humangeo-graphene-movies" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="humangeo-graphene-movies-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="movies" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="annotations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -596,20 +801,25 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../graphene-walker/graphene-walker" />
-    <property name="FullScreen" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="dynamic.classpath" value="false" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="extract.method.default.visibility" value="private" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.humangeo.graphene.movies.dao" />
+      <recent name="com.humangeo.graphene.movies.model.graph" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.humangeo.graphene.movies" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.clean verify (parent)">
+  <component name="RunManager" selected="Maven.jetty:run">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -865,7 +1075,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="1441" y="23" width="1920" height="1057" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -875,7 +1085,9 @@
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3785425" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -884,13 +1096,11 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32942554" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19479166" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39976552" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -916,13 +1126,23 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="15" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/graphene/graphene-dao/4.1.0-SNAPSHOT/graphene-dao-4.1.0-SNAPSHOT-sources.jar!/graphene/services/PropertyGraphBuilder.java</url>
+          <line>108</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/dao/impl/PersonRefDAOImpl.java</url>
+          <line>142</line>
+          <properties />
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="21" />
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="MavenRunConfiguration">
-        <watch expression="nodes.next()" />
-      </configuration>
-    </watches-manager>
+    <watches-manager />
   </component>
   <component name="XPathView.XPathProjectComponent">
     <history />
@@ -933,222 +1153,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/webapp/movies-bootstrap.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="930">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/webapp/movies.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="2130">
-          <caret line="139" column="34" selection-start-line="139" selection-start-column="11" selection-end-line="139" selection-end-column="34" />
-          <folding>
-            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#script#8;n#head#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#script#37;n#head#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/web/rest/EntityServerRSImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="161" max-vertical-offset="1455">
-          <caret line="71" column="30" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/dao/impl/EntityDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2145">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3040#3050#0" expanded="true" />
-            <element signature="e#7462#7475#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="6776" max-vertical-offset="7320">
-          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2595">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/web/pages/EventViewer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.5514706" vertical-offset="375" max-vertical-offset="2535">
-          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/test/java/com/humangeo/graphene/movies/web/services/ServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13786764" vertical-offset="600" max-vertical-offset="1215">
-          <caret line="45" column="17" selection-start-line="45" selection-start-column="17" selection-end-line="72" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13786764" vertical-offset="0" max-vertical-offset="945">
-          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/web/services/AppRestModule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.88235295" vertical-offset="0" max-vertical-offset="1995">
-          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2051" max-vertical-offset="2595">
-          <caret line="93" column="28" selection-start-line="93" selection-start-column="28" selection-end-line="93" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/web/pages/Index.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22058824" vertical-offset="0" max-vertical-offset="544">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/web/pages/About.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13786764" vertical-offset="0" max-vertical-offset="544">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/web/services/AppModule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.77205884" vertical-offset="0" max-vertical-offset="1020">
-          <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/neo4j/neo4j-kernel/2.0.1/neo4j-kernel-2.0.1-sources.jar!/org/neo4j/graphdb/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.76363635" vertical-offset="0" max-vertical-offset="6540">
-          <caret line="61" column="17" selection-start-line="61" selection-start-column="17" selection-end-line="61" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/neo4j/neo4j-kernel/2.0.1/neo4j-kernel-2.0.1-sources.jar!/org/neo4j/graphdb/index/Index.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="70" max-vertical-offset="1665">
-          <caret line="43" column="17" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/neo4j/neo4j-kernel/2.0.1/neo4j-kernel-2.0.1-sources.jar!/org/neo4j/graphdb/GraphDatabaseService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="790" max-vertical-offset="3585">
-          <caret line="96" column="19" selection-start-line="96" selection-start-column="19" selection-end-line="96" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/neo4j/neo4j-kernel/2.0.1/neo4j-kernel-2.0.1-sources.jar!/org/neo4j/graphdb/Label.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.72727275" vertical-offset="15" max-vertical-offset="885">
-          <caret line="59" column="17" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/neo4j/neo4j-kernel/2.0.1/neo4j-kernel-2.0.1-sources.jar!/org/neo4j/tooling/GlobalGraphOperations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43636364" vertical-offset="1440" max-vertical-offset="2265">
-          <caret line="199" column="65" selection-start-line="199" selection-start-column="65" selection-end-line="199" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/web/rest/DataSourceServerRSImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
-          <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/test/java/com/humangeo/graphene/movies/web/services/TestModule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.5919118" vertical-offset="1001" max-vertical-offset="1545">
-          <caret line="9" column="51" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/resources/database.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="484">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/webapp/js/shared/WalkerLegendDefs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33272058" vertical-offset="1454" max-vertical-offset="2325">
-          <caret line="109" column="66" selection-start-line="109" selection-start-column="66" selection-end-line="109" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/graphene/graphene-util/4.1.0-SNAPSHOT/graphene-util-4.1.0-SNAPSHOT-sources.jar!/graphene/util/stats/TimeReporter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="259" max-vertical-offset="3600">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tapestry/tapestry-ioc/5.3.7/tapestry-ioc-5.3.7.jar!/org/apache/tapestry5/ioc/internal/services/JustInTimeObjectCreator.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.44" vertical-offset="109" max-vertical-offset="795">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/resources/DataGraph.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
-          <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/graphene/graphene-dao-neo4j/4.1.0-SNAPSHOT/graphene-dao-neo4j-4.1.0-SNAPSHOT-sources.jar!/graphene/dao/neo4j/Neo4JEmbeddedService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6198347" vertical-offset="915" max-vertical-offset="9345">
-          <caret line="116" column="11" selection-start-line="116" selection-start-column="11" selection-end-line="116" selection-end-column="11" />
-          <folding>
-            <element signature="e#3318#3319#0" expanded="false" />
-            <element signature="e#3373#3374#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/resources/UserGraph.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.06198347" vertical-offset="0" max-vertical-offset="484">
@@ -1161,7 +1165,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="615" max-vertical-offset="1170">
           <caret line="43" column="49" selection-start-line="43" selection-start-column="49" selection-end-line="43" selection-end-column="49" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1192,13 +1196,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334" vertical-offset="1587" max-vertical-offset="4650">
           <caret line="162" column="16" selection-start-line="162" selection-start-column="16" selection-end-line="162" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/jboss/resteasy/resteasy-jaxrs/3.0.1.Final/resteasy-jaxrs-3.0.1.Final.jar!/org/jboss/resteasy/core/MethodInjectorImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35076252" vertical-offset="1204" max-vertical-offset="2280">
-          <caret line="113" column="18" selection-start-line="113" selection-start-column="18" selection-end-line="113" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -1241,14 +1238,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/model/Movie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.78305787" vertical-offset="221" max-vertical-offset="795">
-          <caret line="55" column="60" selection-start-line="55" selection-start-column="60" selection-end-line="55" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/graphene/graphene-model/4.1.0-SNAPSHOT/graphene-model-4.1.0-SNAPSHOT-sources.jar!/graphene/model/view/entities/EntityLight.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="461" max-vertical-offset="1005">
@@ -1260,9 +1249,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.77205884" vertical-offset="465" max-vertical-offset="1485">
           <caret line="59" column="2" selection-start-line="59" selection-start-column="2" selection-end-line="59" selection-end-column="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1270,7 +1256,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5625">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/model/funnels/PersonGEntityFunnel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27272728" vertical-offset="0" max-vertical-offset="825">
+          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#576#577#0" expanded="false" />
+            <element signature="e#627#628#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1286,69 +1283,348 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/model/Person.java">
+    <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/web/rest/EntityServerRSImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="209" max-vertical-offset="945">
-          <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.5971074" vertical-offset="446" max-vertical-offset="1455">
+          <caret line="71" column="30" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/graphene/graphene-util/4.1.0-SNAPSHOT/graphene-util-4.1.0-SNAPSHOT-sources.jar!/graphene/util/validator/ValidationUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1129" max-vertical-offset="3720">
+          <caret line="92" column="26" selection-start-line="92" selection-start-column="26" selection-end-line="92" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/vande/vande/1.1.0-SNAPSHOT/vande-1.1.0-SNAPSHOT-sources.jar!/mil/darpa/vande/generic/V_NodeList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="776" max-vertical-offset="1410">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="e#321#344#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/graphene/graphene-dao/4.1.0-SNAPSHOT/graphene-dao-4.1.0-SNAPSHOT-sources.jar!/graphene/services/AbstractGraphBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1054" max-vertical-offset="2445">
+          <caret line="124" column="18" selection-start-line="124" selection-start-column="18" selection-end-line="124" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/neo4j/neo4j-kernel/2.0.1/neo4j-kernel-2.0.1-sources.jar!/org/neo4j/graphdb/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="505" max-vertical-offset="6540">
+          <caret line="71" column="9" selection-start-line="71" selection-start-column="9" selection-end-line="71" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/vande/vande/1.1.0-SNAPSHOT/vande-1.1.0-SNAPSHOT-sources.jar!/mil/darpa/vande/generic/V_GenericNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1105" max-vertical-offset="6510">
+          <caret line="101" column="16" selection-start-line="101" selection-start-column="16" selection-end-line="101" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/vande/vande/1.1.0-SNAPSHOT/vande-1.1.0-SNAPSHOT-sources.jar!/mil/darpa/vande/generic/V_Actor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="265" max-vertical-offset="2520">
+          <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+          <folding>
+            <element signature="e#917#918#0" expanded="false" />
+            <element signature="e#966#967#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/model/graph/GraphServerModule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/graphene/graphene-model/4.1.0-SNAPSHOT/graphene-model-4.1.0-SNAPSHOT-sources.jar!/graphene/model/query/BasicQuery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.143345" vertical-offset="3194" max-vertical-offset="3780">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/graphene/graphene-model/4.1.0-SNAPSHOT/graphene-model-4.1.0-SNAPSHOT-sources.jar!/graphene/model/query/EntityGraphQuery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.051194537" vertical-offset="0" max-vertical-offset="586">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/dao/impl/GenericDAONeo4jImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20477815" vertical-offset="0" max-vertical-offset="586">
+          <caret line="8" column="60" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/graphene/graphene-dao-neo4j/4.1.0-SNAPSHOT/graphene-dao-neo4j-4.1.0-SNAPSHOT-sources.jar!/graphene/dao/neo4j/annotations/DataGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/dao/GenericDAOAccessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23037542" vertical-offset="0" max-vertical-offset="765">
+          <caret line="9" column="62" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/annotations/Neo4jCypherAccessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17918089" vertical-offset="0" max-vertical-offset="586">
+          <caret line="14" column="37" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/dao/neo4j/Neo4jCypherDAOAccessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.025597269" vertical-offset="0" max-vertical-offset="660">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="n#!!doc;n#Neo4jCypherDAOAccessor#0;n#Neo4jCypherDAOAccessor#0" expanded="false" />
+            <element signature="n#!!doc;n#get#0;n#Neo4jCypherDAOAccessor#0" expanded="false" />
+            <element signature="e#2472#2473#0" expanded="true" />
+            <element signature="e#2500#2501#0" expanded="true" />
+            <element signature="e#2557#2558#0" expanded="true" />
+            <element signature="e#2585#2586#0" expanded="true" />
+            <element signature="e#2642#2643#0" expanded="true" />
+            <element signature="e#2670#2671#0" expanded="true" />
+            <element signature="n#!!doc;n#getGraphDbService#0;n#Neo4jCypherDAOAccessor#0" expanded="false" />
+            <element signature="e#2788#2789#0" expanded="true" />
+            <element signature="e#2826#2827#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/graphene/graphene-dao-neo4j/4.1.0-SNAPSHOT/graphene-dao-neo4j-4.1.0-SNAPSHOT-sources.jar!/graphene/dao/neo4j/DAONeo4JEModule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2757353" vertical-offset="0" max-vertical-offset="1395">
+        <state vertical-scroll-proportion="0.25597268" vertical-offset="0" max-vertical-offset="1395">
           <caret line="21" column="28" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/graphene/graphene-util/4.1.0-SNAPSHOT/graphene-util-4.1.0-SNAPSHOT-sources.jar!/graphene/util/ExceptionUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3327645" vertical-offset="15" max-vertical-offset="675">
+          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/graphene/graphene-dao/4.1.0-SNAPSHOT/graphene-dao-4.1.0-SNAPSHOT-sources.jar!/graphene/dao/EntityRefDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1725">
+          <caret line="21" column="66" selection-start-line="21" selection-start-column="66" selection-end-line="21" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/graphene/graphene-dao/4.1.0-SNAPSHOT/graphene-dao-4.1.0-SNAPSHOT-sources.jar!/graphene/dao/GenericDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="719" max-vertical-offset="1305">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/src.zip!/java/lang/StringBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3327645" vertical-offset="1320" max-vertical-offset="6000">
+          <caret line="130" column="25" selection-start-line="130" selection-start-column="25" selection-end-line="130" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/src.zip!/java/lang/Override.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6911263" vertical-offset="0" max-vertical-offset="586">
+          <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/utils/RandomUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17918089" vertical-offset="0" max-vertical-offset="586">
+          <caret line="7" column="64" selection-start-line="7" selection-start-column="64" selection-end-line="7" selection-end-column="64" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/dao/MoviesDAOModule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3033088" vertical-offset="0" max-vertical-offset="1440">
-          <caret line="63" column="21" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/dao/impl/EntityDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.4669118" vertical-offset="2606" max-vertical-offset="3150">
-          <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="689" max-vertical-offset="2160">
+          <caret line="69" column="20" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3040#3050#0" expanded="true" />
-            <element signature="e#7462#7475#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/web/rest/EntityServerRSImpl.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/jboss/resteasy/resteasy-jaxrs/3.0.1.Final/resteasy-jaxrs-3.0.1.Final.jar!/org/jboss/resteasy/core/MethodInjectorImpl.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.351103" vertical-offset="0" max-vertical-offset="1455">
-          <caret line="71" column="30" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
+        <state vertical-scroll-proportion="-7.8" vertical-offset="1170" max-vertical-offset="2280">
+          <caret line="113" column="18" selection-start-line="113" selection-start-column="18" selection-end-line="113" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/model/funnels/PersonGEntityFunnel.java">
+    <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/dao/neo4j/Neo4jCypherQuery.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27272728" vertical-offset="0" max-vertical-offset="825">
-          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2066" max-vertical-offset="3180">
+          <caret line="153" column="30" selection-start-line="153" selection-start-column="30" selection-end-line="153" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/graphene/graphene-rest/4.1.0-SNAPSHOT/graphene-rest-4.1.0-SNAPSHOT-sources.jar!/graphene/rest/ws/impl/CSGraphServerRSImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3327645" vertical-offset="1485" max-vertical-offset="3090">
+          <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tapestry/tapestry-ioc/5.3.7/tapestry-ioc-5.3.7.jar!/org/apache/tapestry5/ioc/internal/services/JustInTimeObjectCreator.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34759358" vertical-offset="75" max-vertical-offset="795">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/dao/impl/PersonDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="885" max-vertical-offset="2595">
+          <caret line="119" column="21" selection-start-line="117" selection-start-column="16" selection-end-line="119" selection-end-column="21" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#576#577#0" expanded="true" />
-            <element signature="e#627#628#0" expanded="true" />
+            <element signature="n#!!doc;n#PersonDAOImpl#0;n#PersonDAOImpl#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/webapp/movies-bootstrap.html">
+    <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/dao/impl/PersonRefDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60674155" vertical-offset="129" max-vertical-offset="930">
-          <caret line="41" column="10" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2414" max-vertical-offset="3045">
+          <caret line="202" column="31" selection-start-line="202" selection-start-column="31" selection-end-line="202" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="n#!!doc;n#PersonRefDAOImpl#0;n#PersonRefDAOImpl#0" expanded="false" />
+            <element signature="e#4216#4217#0" expanded="true" />
+            <element signature="e#4243#4244#0" expanded="true" />
+            <element signature="e#4437#4438#0" expanded="true" />
+            <element signature="e#4464#4465#0" expanded="true" />
+            <element signature="e#4668#4669#0" expanded="true" />
+            <element signature="e#4695#4696#0" expanded="true" />
+            <element signature="e#5071#5072#0" expanded="true" />
+            <element signature="e#5099#5100#0" expanded="true" />
+            <element signature="e#5209#5210#0" expanded="true" />
+            <element signature="e#5233#5234#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/graphene/graphene-dao/4.1.0-SNAPSHOT/graphene-dao-4.1.0-SNAPSHOT-sources.jar!/graphene/services/HyperGraphBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.102389075" vertical-offset="0" max-vertical-offset="1260">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/graphene/graphene-dao/4.1.0-SNAPSHOT/graphene-dao-4.1.0-SNAPSHOT-sources.jar!/graphene/services/PropertyGraphBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.2235496" vertical-offset="2084" max-vertical-offset="2670">
+          <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/web/services/AppModule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1020">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/model/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48634812" vertical-offset="0" max-vertical-offset="586">
+          <caret line="94" column="4" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="4" />
+          <folding>
+            <element signature="n#!!doc;n#_logger#0;n#Person#0" expanded="false" />
+            <element signature="n#!!doc;n#NAME#0;n#Person#0" expanded="false" />
+            <element signature="n#!!doc;n#Person#0;n#Person#0" expanded="false" />
+            <element signature="n#!!doc;n#getId#0;n#Person#0" expanded="false" />
+            <element signature="n#!!doc;n#getProperties#0;n#Person#0" expanded="false" />
+            <element signature="n#!!doc;n#toString#0;n#Person#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/model/Movie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46075085" vertical-offset="0" max-vertical-offset="586">
+          <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc;n#_logger#0;n#Movie#0" expanded="false" />
+            <element signature="n#!!doc;n#TITLE#0;n#Movie#0" expanded="false" />
+            <element signature="n#!!doc;n#Movie#0;n#Movie#0" expanded="false" />
+            <element signature="n#!!doc;n#getId#0;n#Movie#0" expanded="false" />
+            <element signature="n#!!doc;n#getProperties#0;n#Movie#0" expanded="false" />
+            <element signature="n#!!doc;n#toString#0;n#Movie#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/humangeo-graphene-movies-web/src/main/java/com/humangeo/graphene/movies/model/graph/PersonGraphBuilderImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.025597269" vertical-offset="1755" max-vertical-offset="2910">
+          <caret line="147" column="18" selection-start-line="147" selection-start-column="18" selection-end-line="183" selection-end-column="11" />
+          <folding>
+            <element signature="n#!!doc;n#PersonGraphBuilderImpl#0;n#PersonGraphBuilderImpl#0" expanded="false" />
+            <element signature="e#1329#1330#0" expanded="true" />
+            <element signature="e#1359#1360#0" expanded="true" />
+            <element signature="method#performPostProcess#0;class#PersonGraphBuilderImpl#0" expanded="false" />
+            <element signature="e#8711#8712#0" expanded="true" />
+            <element signature="e#8738#8739#0" expanded="true" />
+            <element signature="e#9321#9322#0" expanded="true" />
+            <element signature="e#9349#9350#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

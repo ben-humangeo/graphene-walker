@@ -5,7 +5,7 @@ import graphene.rest.services.RestModule;
 import graphene.util.PropertiesFileSymbolProvider;
 import graphene.util.UtilModule;
 import com.humangeo.graphene.movies.dao.MoviesDAOModule;
-//import graphene.walker.model.graphserver.GraphServerModule;
+import com.humangeo.graphene.movies.model.graph.GraphServerModule;
 //import graphene.web.security.ShiroSecurityModule;
 import graphene.web.security.NoSecurityModule;
 import graphene.web.services.GrapheneModule;
@@ -27,7 +27,7 @@ import org.tynamo.security.SecuritySymbols;
  * service definitions.
  */
 @SubModule({ MoviesDAOModule.class, AppRestModule.class,
-		/*GraphServerModule.class,*/ GrapheneModule.class, RestModule.class,
+		GraphServerModule.class, GrapheneModule.class, RestModule.class,
 		UtilModule.class, /* ShiroSecurityModule.class */NoSecurityModule.class })
 public class AppModule {
 

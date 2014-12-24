@@ -1,11 +1,12 @@
 package com.humangeo.graphene.movies.dao.impl;
 
+import com.humangeo.graphene.movies.annotations.Neo4jCypherAccessor;
+import com.humangeo.graphene.movies.dao.neo4j.Neo4jCypherDAOAccessor;
+import com.humangeo.graphene.movies.dao.neo4j.Neo4jCypherQuery;
 import com.humangeo.graphene.movies.model.Person;
 import com.humangeo.graphene.movies.model.Movie;
 import graphene.dao.EntityDAO;
 import graphene.dao.annotations.EntityLightFunnelMarker;
-import graphene.dao.neo4j.Neo4JEmbeddedService;
-import graphene.dao.neo4j.annotations.DataGraph;
 import graphene.model.Funnel;
 import graphene.model.idl.*;
 import graphene.model.idlhelper.EntityHelper;
@@ -14,15 +15,10 @@ import graphene.model.query.EventQuery;
 import graphene.model.query.SearchFilter;
 import graphene.model.view.entities.EntityLight;
 import org.apache.tapestry5.ioc.annotations.Inject;
-import org.neo4j.cypher.ExecutionEngine;
-import org.neo4j.cypher.ExecutionResult;
 import org.neo4j.graphdb.*;
-import org.neo4j.kernel.impl.util.StringLogger;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import scala.collection.Iterator;
 
-import java.io.File;
 import java.util.*;
 
 /**
@@ -35,15 +31,17 @@ import java.util.*;
  *
  * Created by bparrish on 12/23/14.
  */
-public class EntityDAOImpl implements EntityDAO {
+public class PersonDAOImpl implements EntityDAO {
 
-    private Logger logger = LoggerFactory.getLogger(EntityDAOImpl.class);
+    private Logger _logger = LoggerFactory.getLogger(PersonDAOImpl.class);
 
-    private GraphDatabaseService _graphDbService;
-
-    private ExecutionEngine _executionEngine;
+    private Neo4jCypherDAOAccessor _neo4jCypherDAOAccessor;
 
     private Funnel<EntityLight, G_Entity> _funnel;
+
+    //<editor-fold desc="constructors">
+    // force use of other constructor
+    private PersonDAOImpl() { }
 
     /***
      * Default constructor
@@ -51,24 +49,19 @@ public class EntityDAOImpl implements EntityDAO {
      * @see graphene.dao.neo4j.DAONeo4JEModule - sets up the Neo4JEmbeddedService injection
      * @see com.humangeo.graphene.movies.dao.MoviesDAOModule - sets up funnel injection
      * @see com.humangeo.graphene.movies.model.funnels.MoviesEntityLightFunnel
-     * @param embeddedService
+     * @param neo4jCypherDAOAccessor
      * @param funnel
      */
     @Inject
-    public EntityDAOImpl(@DataGraph Neo4JEmbeddedService embeddedService, @EntityLightFunnelMarker Funnel funnel) {
-        // get the Graph Database Service that we can use to query the Neo4j database
-        _graphDbService = embeddedService.getGraphDb();
-
-        // create a log file
-        File file = new File("/tmp/graph_db_cypher_logger.log");
-
-        // setup the cypher execution engine
-        _executionEngine = new ExecutionEngine(_graphDbService, StringLogger.logger(file));
+    public PersonDAOImpl(@Neo4jCypherAccessor Neo4jCypherDAOAccessor neo4jCypherDAOAccessor, @EntityLightFunnelMarker Funnel funnel) {
+        _neo4jCypherDAOAccessor = neo4jCypherDAOAccessor;
 
         // set the funnel from the injected funnel -- this converts G_Entity to EntityLight
         _funnel = funnel;
     }
+    //</editor-fold>
 
+    //<editor-fold desc="interface methods">
     /***
      * This method will get all entities based on the advanced search object.
      *
@@ -81,8 +74,6 @@ public class EntityDAOImpl implements EntityDAO {
     public List<G_Entity> getEntitiesByAdvancedSearch(AdvancedSearch search) {
         ArrayList<G_Entity> results = new ArrayList<G_Entity>();
 
-        String cypherQuery = "";
-
         // iterate through each filter...we should only have 1 filter right now
         for (SearchFilter filter : search.getFilters()) {
             // retrieve the field name that is being searched on
@@ -91,30 +82,40 @@ public class EntityDAOImpl implements EntityDAO {
             // retrieve the value that is being searched for
             String fieldValue = filter.getValue();
 
+            String cypherQuery = "";
+
             // check to see if we are search for an Actor or a Movie
             if (fieldName.equals("name")) {
-                // create a cypher query for Neo4j that uses a regex expression to find a case-insensitive name on an Person label
-                cypherQuery = "MATCH (n:`Person`) WHERE has(n.`name`) AND n.`name` =~ '(?i).*" + fieldValue + ".*' RETURN (n)";
+                // create a cypher query for Neo4j that uses a regex expression to find a case-insensitive name on an Person label"n.`name`"
+                cypherQuery = new Neo4jCypherQuery()
+                        .match("(n:`Person`)")
+                        .where()
+                        .has("n.`name`")
+                        .and()
+                        .regex("n.`name`", ".*" + fieldValue + ".*", true)
+                        .ret("n")
+                        .build();
             } else if (fieldName.equals("title")) {
                 // create a cypher query for Neo4j that uses a regex expression to find a case-insensitive title on  a Movie label
-                cypherQuery = "MATCH (n:`Movie`) WHERE has(n.`title`) AND n.`title` =~ '(?i).*" + fieldValue + ".*' RETURN (n)";
+                cypherQuery = new Neo4jCypherQuery()
+                        .match("(n:`Movie`)")
+                        .where()
+                        .has("n.`title`")
+                        .and()
+                        .regex("n.`title`", ".*" + fieldValue + ".*", true)
+                        .ret("n")
+                        .build();
             } else {
                 return null;
             }
 
-            // execute the cypher query
-            ExecutionResult executionResult = _executionEngine.execute(cypherQuery);
-
-            // get all of the objects -- note the n that was in the cypher query text and the columnAs n here
-            Iterator<Object> nodes = executionResult.columnAs("n");
+            // get all of the nodes
+            List<Node> nodes = _neo4jCypherDAOAccessor.get(cypherQuery);
 
             // iterate through each node found
-            while (nodes.hasNext()) {
-                // get the next node
-                Node node = (Node) nodes.next();
-
+            for (Node node : nodes) {
                 // start the database transaction so that we can get the properties from the node
-                Transaction tx = _graphDbService.beginTx();
+                Transaction tx = _neo4jCypherDAOAccessor.getGraphDbService().beginTx();
 
                 try {
                     // create the G_Entity values
@@ -204,5 +205,6 @@ public class EntityDAOImpl implements EntityDAO {
         // return all of the lightweight results
         return list;
     }
+    //</editor-fold>
 
 }
