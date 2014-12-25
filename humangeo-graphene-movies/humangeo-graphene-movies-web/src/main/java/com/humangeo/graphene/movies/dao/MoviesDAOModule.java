@@ -1,17 +1,17 @@
 package com.humangeo.graphene.movies.dao;
 
+import com.humangeo.graphene.movies.annotations.Neo4jCypherAccessor;
+import com.humangeo.graphene.movies.dao.impl.PersonDAOImpl;
+import com.humangeo.graphene.movies.dao.impl.PersonRefDAOImpl;
+import com.humangeo.graphene.movies.dao.neo4j.Neo4jCypherDAOAccessor;
 import com.humangeo.graphene.movies.model.funnels.MoviesEntityLightFunnel;
-import graphene.dao.CombinedDAO;
 import graphene.dao.DataSourceListDAO;
 import graphene.dao.EntityDAO;
 import graphene.dao.EntityGraphDAO;
 import graphene.dao.EntityRefDAO;
 import graphene.dao.GroupDAO;
-import graphene.dao.IdTypeDAO;
 import graphene.dao.PermissionDAO;
-import graphene.dao.ReportPopulator;
 import graphene.dao.RoleDAO;
-import graphene.dao.TransactionDAO;
 import graphene.dao.UserDAO;
 import graphene.dao.UserGroupDAO;
 import graphene.dao.UserWorkspaceDAO;
@@ -27,30 +27,17 @@ import graphene.dao.neo4j.WorkspaceDAONeo4JEImpl;
 import graphene.dao.neo4j.funnel.GroupFunnel;
 import graphene.dao.neo4j.funnel.UserFunnel;
 import graphene.dao.neo4j.funnel.WorkspaceFunnel;
-import graphene.dao.sql.DAOSQLModule;
 import graphene.model.Funnel;
-import graphene.model.idl.G_SymbolConstants;
-import graphene.model.memorydb.IMemoryDB;
-import com.humangeo.graphene.movies.dao.impl.EntityDAOImpl;
-import graphene.model.view.entities.DefaultEntityLightFunnel;
 import graphene.services.SimplePermissionDAOImpl;
 import graphene.services.SimpleRoleDAOImpl;
-import graphene.util.FastNumberUtils;
-import graphene.util.PropertiesFileSymbolProvider;
 import graphene.util.db.JDBCUtil;
 import com.humangeo.graphene.movies.dao.impl.DataSourceListDAOImpl;
 
 import org.apache.tapestry5.ioc.Configuration;
-import org.apache.tapestry5.ioc.Invokable;
-import org.apache.tapestry5.ioc.MappedConfiguration;
 import org.apache.tapestry5.ioc.ScopeConstants;
 import org.apache.tapestry5.ioc.ServiceBinder;
 import org.apache.tapestry5.ioc.annotations.Contribute;
-import org.apache.tapestry5.ioc.annotations.Inject;
-import org.apache.tapestry5.ioc.annotations.Startup;
 import org.apache.tapestry5.ioc.annotations.SubModule;
-import org.apache.tapestry5.ioc.annotations.Symbol;
-import org.apache.tapestry5.ioc.services.ParallelExecutor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -71,12 +58,21 @@ public class MoviesDAOModule {
 		binder.bind(RoleDAO.class, SimpleRoleDAOImpl.class);
 		binder.bind(PermissionDAO.class, SimplePermissionDAOImpl.class);
 
-		binder.bind(EntityDAO.class, EntityDAOImpl.class);
+		binder.bind(EntityDAO.class, PersonDAOImpl.class);
+		binder.bind(EntityRefDAO.class, PersonRefDAOImpl.class);
 
 		// TODO: Make this into a service in the core we can contribute to (for
 		// distributed configuration!)
 		binder.bind(DataSourceListDAO.class, DataSourceListDAOImpl.class);
 
+		// bind our data accessors
+		//noinspection unchecked
+		binder.bind(Neo4jCypherDAOAccessor.class)
+				.withId("Neo4jCypher")
+				.withMarker(Neo4jCypherAccessor.class)
+				.scope(ScopeConstants.DEFAULT);
+
+		//noinspection unchecked
 		binder.bind(Funnel.class, MoviesEntityLightFunnel.class).withMarker(EntityLightFunnelMarker.class);
 
 		// Wiring for user services
