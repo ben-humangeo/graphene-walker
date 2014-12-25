@@ -1,5 +1,9 @@
 package com.humangeo.graphene.movies.model.graph;
 
+import com.humangeo.graphene.movies.annotations.Neo4jCypherAccessor;
+import com.humangeo.graphene.movies.dao.neo4j.Neo4jCypherDAOAccessor;
+import com.humangeo.graphene.movies.dao.neo4j.Neo4jCypherQuery;
+import com.humangeo.graphene.movies.model.Movie;
 import com.humangeo.graphene.movies.model.Person;
 import graphene.dao.EntityRefDAO;
 import graphene.dao.GenericDAO;
@@ -9,14 +13,18 @@ import graphene.model.query.EntityQuery;
 import graphene.services.HyperGraphBuilder;
 import graphene.services.PropertyGraphBuilder;
 import graphene.util.validator.ValidationUtils;
-import mil.darpa.vande.generic.V_GenericNode;
-import mil.darpa.vande.generic.V_GraphQuery;
+import mil.darpa.vande.generic.*;
 import org.apache.avro.AvroRemoteException;
 import org.apache.tapestry5.ioc.annotations.Inject;
+import org.neo4j.graphdb.Node;
+import org.neo4j.graphdb.Transaction;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by bparrish on 12/23/14.
@@ -24,6 +32,8 @@ import java.util.Iterator;
 public class PersonGraphBuilderImpl extends PropertyGraphBuilder<Person> implements HyperGraphBuilder<Person> {
 
     private Logger logger = LoggerFactory.getLogger(PersonGraphBuilderImpl.class);
+
+    private Neo4jCypherDAOAccessor _neo4jCypherDAOAccessor;
 
     //<editor-fold desc="constructors">
     // force to use the constructor that has the EntityRefDAO parameter
@@ -35,10 +45,70 @@ public class PersonGraphBuilderImpl extends PropertyGraphBuilder<Person> impleme
      * @see com.humangeo.graphene.movies.dao.MoviesDAOModule - sets up the EntityRefDAO injection
      * @param dao
      */
-    public PersonGraphBuilderImpl(@Inject EntityRefDAO dao) {
+    public PersonGraphBuilderImpl(@Neo4jCypherAccessor Neo4jCypherDAOAccessor neo4jCypherDAOAccessor, @Inject EntityRefDAO dao) {
+        _neo4jCypherDAOAccessor = neo4jCypherDAOAccessor;
+
         this.dao = dao;
     }
     //</editor-fold>
+
+    @Override
+    public V_GenericGraph makeGraphResponse(final V_GraphQuery graphQuery) throws Exception {
+        if (graphQuery.getMaxHops() <= 0) {
+            return new V_GenericGraph();
+        } else {
+            logger.debug("Attempting a graph for query " + graphQuery.toString());
+        }
+
+        edgeList = new V_EdgeList(null);
+
+        for (String searchId : graphQuery.getSearchIds()) {
+            String cypherQuery = new Neo4jCypherQuery()
+                    .start("p=node(" + searchId + ")")
+                    .match("p-[]->(m)")
+                    .ret("p,m").build();
+
+            Map<String, List<Node>> nodes = _neo4jCypherDAOAccessor.get(cypherQuery, "p", "m");
+
+            List<Node> personNodes = nodes.get("p");
+            List<Node> movieNodes = nodes.get("m");
+
+            Transaction tx = _neo4jCypherDAOAccessor.getGraphDbService().beginTx();
+
+            try {
+                for (int i = 0; i < personNodes.size(); i++) {
+                    Node personNode = personNodes.get(i);
+                    V_GenericNode personGenericNode = nodeList.getNode("" + personNode.getId());
+                    if (personGenericNode == null) {
+                        Person person = new Person(personNode);
+                        personGenericNode = person.getAsGenericNode();
+                        nodeList.addNode(personGenericNode);
+                    }
+
+                    Node movieNode = movieNodes.get(i);
+                    V_GenericNode movieGenericNode = nodeList.getNode("" + movieNode.getId());
+                    if (movieGenericNode == null) {
+                        Movie movie = new Movie(movieNode);
+                        movieGenericNode = movie.getAsGenericNode();
+                        nodeList.addNode(movieGenericNode);
+                    }
+
+                    V_GenericEdge edge = new V_GenericEdge(personGenericNode, movieGenericNode);
+                    edgeList.addEdge(edge);
+                }
+
+                tx.success();
+            } finally {
+                tx.close();
+            }
+        }
+
+        performPostProcess(graphQuery);
+
+        V_GenericGraph g = new V_GenericGraph(nodeList.getNodes(), edgeList.getEdges());
+
+        return g;
+    }
 
     //<editor-fold desc="HyperGraphBuilder overrides">
     @Override
@@ -60,7 +130,7 @@ public class PersonGraphBuilderImpl extends PropertyGraphBuilder<Person> impleme
                     personNode.setIdVal(personName);
                     personNode.setValue(personName);
                     personNode.setLabel("Name");
-                    personNode.setColor(person.getNameColor());
+                    personNode.setColor(person.getColor());
                 } catch (AvroRemoteException e) {
                     e.printStackTrace();
                 }

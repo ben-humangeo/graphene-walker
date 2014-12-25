@@ -2,6 +2,7 @@ package com.humangeo.graphene.movies.dao.impl;
 
 import com.humangeo.graphene.movies.annotations.Neo4jCypherAccessor;
 import com.humangeo.graphene.movies.dao.neo4j.Neo4jCypherDAOAccessor;
+import com.humangeo.graphene.movies.dao.neo4j.Neo4jCypherQuery;
 import com.humangeo.graphene.movies.model.Person;
 import graphene.dao.EntityRefDAO;
 import graphene.model.idl.G_CanonicalPropertyType;
@@ -17,10 +18,7 @@ import org.neo4j.graphdb.Transaction;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by bparrish on 12/24/14.
@@ -50,7 +48,17 @@ public class PersonRefDAOImpl implements EntityRefDAO<Person, EntityQuery> {
     //<editor-fold desc="interface methods">
     @Override
     public long countEdges(String id) throws Exception {
-        return 0;
+        // START n=node(<id>) MATCH (n)-[]->() RETURN n
+        String cypherQuery = new Neo4jCypherQuery()
+                .start("p=node(" + id + ")")
+                .match("p-[]->()")
+                .ret("p").build();
+
+        Map<String, List<Node>> nodes = _neo4jCypherDAOAccessor.get(cypherQuery, "p");
+
+        List<Node> pNodes = nodes.get("p");
+
+        return pNodes.size();
     }
 
     @Override
@@ -79,10 +87,10 @@ public class PersonRefDAOImpl implements EntityRefDAO<Person, EntityQuery> {
             }
 
             // get all of the nodes
-            List<Node> nodes = _neo4jCypherDAOAccessor.get(cypherQuery);
+            Map<String, List<Node>> nodes = _neo4jCypherDAOAccessor.get(cypherQuery, "n");
 
             // iterate through each node found
-            for (Node node : nodes) {
+            for (Node node : nodes.get("n")) {
                 // start the database transaction so that we can get the properties from the node
                 Transaction tx = _neo4jCypherDAOAccessor.getGraphDbService().beginTx();
 
@@ -188,9 +196,11 @@ public class PersonRefDAOImpl implements EntityRefDAO<Person, EntityQuery> {
                 cypherQuery = cypherQuery + " LIMIT " + maxResults;
             }
 
-            List<Node> nodes = _neo4jCypherDAOAccessor.get(cypherQuery);
+            // get all of the nodes
+            Map<String, List<Node>> nodes = _neo4jCypherDAOAccessor.get(cypherQuery, "n");
 
-            for (Node node : nodes) {
+            // iterate through each node found
+            for (Node node : nodes.get("n")) {
                 Transaction tx = _neo4jCypherDAOAccessor.getGraphDbService().beginTx();
 
                 try {

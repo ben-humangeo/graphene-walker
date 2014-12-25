@@ -3,6 +3,7 @@ package com.humangeo.graphene.movies.model;
 import com.humangeo.graphene.movies.utils.RandomUtils;
 import graphene.model.idl.*;
 import graphene.model.idlhelper.PropertyHelper;
+import mil.darpa.vande.generic.V_GenericNode;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.neo4j.graphdb.Node;
 import org.neo4j.graphdb.NotFoundException;
@@ -23,7 +24,7 @@ public class Person {
 
     private long _id;
     private String _name;
-    private String _birthYear;
+    private String _born;
     //</editor-fold>
 
     //<editor-fold desc="constants">
@@ -39,7 +40,7 @@ public class Person {
         try {
             _id = node.getId();
             _name = node.getProperty(NAME).toString();
-//            _birthYear = node.getProperty(BORN).toString();
+//            _born = node.getProperty(BORN).toString();
         } catch (NotFoundException nfe) {
             _logger.error("Error converting Node to Actor", nfe);
         }
@@ -54,11 +55,21 @@ public class Person {
     }
 
     public String getBirthYear() {
-        return _birthYear;
+        return _born;
     }
     //</editor-fold>
 
     //<editor-fold desc="public methods">
+    public V_GenericNode getAsGenericNode() {
+        V_GenericNode node = new V_GenericNode();
+
+        node.setId("" + _id);
+        node.addData(NAME, _name);
+        node.addData(BORN, _born);
+
+        return node;
+    }
+
     public List<G_Property> getProperties(G_Provenance provenance, G_Uncertainty uncertainty) {
         List<G_Property> properties = new ArrayList<>();
 
@@ -87,7 +98,7 @@ public class Person {
         return properties;
     }
 
-    public String getNameColor() {
+    public String getColor() {
         return "#00FF00";
     }
     //</editor-fold>
@@ -99,7 +110,7 @@ public class Person {
                 "{\"id\":%d,\"name\":\"%s\",\"birthYear\":%s",
                 _id,
                 _name,
-                (_birthYear != null) ? _birthYear : ""
+                (_born != null) ? _born : ""
         );
     }
 

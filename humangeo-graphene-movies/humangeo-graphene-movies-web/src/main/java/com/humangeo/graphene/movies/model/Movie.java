@@ -4,6 +4,7 @@ import com.humangeo.graphene.movies.utils.RandomUtils;
 import graphene.model.idl.*;
 import graphene.model.idlhelper.PropertyHelper;
 import graphene.model.idlhelper.SingletonRangeHelper;
+import mil.darpa.vande.generic.V_GenericNode;
 import org.apache.commons.collections.ListUtils;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.neo4j.graphdb.Node;
@@ -54,6 +55,15 @@ public class Movie {
     //</editor-fold>
 
     //<editor-fold desc="public methods">
+    public V_GenericNode getAsGenericNode() {
+        V_GenericNode node = new V_GenericNode();
+
+        node.setId("" + _id);
+        node.addData(TITLE, _title);
+
+        return node;
+    }
+
     public List<G_Property> getProperties(G_Provenance provenance, G_Uncertainty uncertainty) {
         List<G_Property> properties = new ArrayList<>();
 

@@ -1,6 +1,7 @@
 package com.humangeo.graphene.movies.dao;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * This interface defines how one should implement a generic DAO set of data calls.
@@ -19,7 +20,7 @@ public interface GenericDAOAccessor<T, Q> {
      * @param query
      * @return
      */
-    public List<T> get(Q query);
+    public Map<String, List<T>> get(Q query, String... setIdentifiers);
 
     /***
      * This method will send a create call to the dataset.  It will return true on success and false on failure.

@@ -86,7 +86,8 @@ public class PersonDAOImpl implements EntityDAO {
 
             // check to see if we are search for an Actor or a Movie
             if (fieldName.equals("name")) {
-                // create a cypher query for Neo4j that uses a regex expression to find a case-insensitive name on an Person label"n.`name`"
+                // create a cypher query for Neo4j that uses a regex expression
+                // to find a case-insensitive name on an Person label"n.`name`"
                 cypherQuery = new Neo4jCypherQuery()
                         .match("(n:`Person`)")
                         .where()
@@ -96,7 +97,8 @@ public class PersonDAOImpl implements EntityDAO {
                         .ret("n")
                         .build();
             } else if (fieldName.equals("title")) {
-                // create a cypher query for Neo4j that uses a regex expression to find a case-insensitive title on  a Movie label
+                // create a cypher query for Neo4j that uses a regex expression
+                // to find a case-insensitive title on  a Movie label
                 cypherQuery = new Neo4jCypherQuery()
                         .match("(n:`Movie`)")
                         .where()
@@ -110,10 +112,10 @@ public class PersonDAOImpl implements EntityDAO {
             }
 
             // get all of the nodes
-            List<Node> nodes = _neo4jCypherDAOAccessor.get(cypherQuery);
+            Map<String, List<Node>> nodes = _neo4jCypherDAOAccessor.get(cypherQuery, "n");
 
             // iterate through each node found
-            for (Node node : nodes) {
+            for (Node node : nodes.get("n")) {
                 // start the database transaction so that we can get the properties from the node
                 Transaction tx = _neo4jCypherDAOAccessor.getGraphDbService().beginTx();
 

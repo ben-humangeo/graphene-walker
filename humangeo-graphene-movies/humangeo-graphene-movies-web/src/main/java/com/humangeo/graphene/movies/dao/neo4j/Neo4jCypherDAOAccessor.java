@@ -8,6 +8,7 @@ import org.neo4j.cypher.ExecutionEngine;
 import org.neo4j.cypher.ExecutionResult;
 import org.neo4j.graphdb.GraphDatabaseService;
 import org.neo4j.graphdb.Node;
+import org.neo4j.graphdb.ResourceIterator;
 import org.neo4j.kernel.impl.util.StringLogger;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,7 +16,9 @@ import scala.collection.Iterator;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * This class is utilized to make calls to a Neo4j instance using Cypher queries.
@@ -54,21 +57,33 @@ public class Neo4jCypherDAOAccessor implements GenericDAOAccessor<Node, String> 
 
     //<editor-fold desc="interface methods">
     @Override
-    public List<Node> get(String query) {
-        List<Node> results = new ArrayList<>();
+    public Map<String, List<Node>> get(String query, String... setIdentifiers) {
+        Map<String, List<Node>> results = new HashMap<>();
+
+        for (String setIdentifier : setIdentifiers) {
+            results.put(setIdentifier, new ArrayList<Node>());
+        }
 
         // execute the cypher query
         ExecutionResult executionResult = _executionEngine.execute(query);
 
         // get all of the objects -- note the n that was in the cypher query text and the columnAs n here
-        Iterator<Object> nodes = executionResult.columnAs("n");
+        ResourceIterator<Map<String, Object>> foundNodes = executionResult.javaIterator();
 
         // iterate through each node found
-        while (nodes.hasNext()) {
+        while (foundNodes.hasNext()) {
             // get the next node
-            Node node = (Node) nodes.next();
+            Map<String, Object> rowMap = (Map<String, Object>) foundNodes.next();
 
-            results.add(node);
+            for (String setIdentifier : setIdentifiers) {
+                List<Node> identifierNodes = results.get(setIdentifier);
+
+                Node node = (Node) rowMap.get(setIdentifier);
+
+                identifierNodes.add(node);
+
+                results.put(setIdentifier, identifierNodes);
+            }
         }
 
         // return the results

@@ -65,6 +65,31 @@ public class Neo4jCypherQuery {
     }
 
     /***
+     * This method will start a WITH statement.
+     *
+     * @return
+     */
+    public Neo4jCypherQuery with() {
+        _finalCypherQuery.append("WITH ");
+
+        return this;
+    }
+
+    /***
+     * This method will start a DISTINCT statement.
+     *
+     * @param clause - user supplied clause
+     * @return
+     */
+    public Neo4jCypherQuery distinct(String clause) {
+        String formattedClause = String.format("DISTINCT %s ", clause);
+
+        _finalCypherQuery.append(formattedClause);
+
+        return this;
+    }
+
+    /***
      * This method will start a WHERE statement.
      *
      * @return
