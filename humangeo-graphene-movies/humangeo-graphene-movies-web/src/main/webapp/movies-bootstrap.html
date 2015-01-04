@@ -59,20 +59,11 @@
             <span id="querySearch" class="input-group-addon">?</span>
         </div>
     </div>
-    <!--
     <div id="toolbar" class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 col-md-offset-8 text-right">
             <i id="backButton" class="bar-button fa fa-reply fa-2x" data-toggle="tooltip" data-placement="bottom" title="Back to search"></i>
         </div>
-        <div class="col-md-4 text-center">
-            <i id="circleLayoutButton" class="bar-button fa fa-circle-o fa-2x" data-toggle="tooltip" data-placement="bottom" title="Circle Layout"></i>
-            <i id="gridLayoutButton" class="bar-button fa fa-th fa-2x" data-toggle="tooltip" data-placement="bottom" title="Grid Layout"></i>
-        </div>
-        <div class="col-md-4 text-right">
-            <i id="centerButton" class="bar-button fa fa-dot-circle-o fa-2x" data-toggle="tooltip" data-placement="bottom" title="Fit Graph"></i>
-        </div>
     </div>
-    -->
     <div id="searchResults"></div>
     <div id="graphResults"></div>
 </script>
@@ -142,6 +133,12 @@
                 }
             });
         }
+
+        $('#queryInput').keypress(function(e) {
+            if(e.keyCode == 13) {
+                searchView.querySearch();
+            }
+        });
     });
 </script>
 

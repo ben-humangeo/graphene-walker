@@ -1,11 +1,8 @@
 /* GLOBALS */
 var searchContent = '#searchContent';
 var queryInput = "#queryInput";
-//var toolbar = '#toolbar';
-//var backButton = "#backButton";
-//var gridLayoutButton = '#circleLayoutButton';
-//var gridLayoutButton = '#gridLayoutButton';
-//var centerButton = "#centerButton";
+var toolbar = '#toolbar';
+var backButton = "#backButton";
 var searchResults = "#searchResults";
 var graphResults = "#graphResults";
 
@@ -194,38 +191,22 @@ var searchView = new SearchView();
 // initialize view without collection object
 var searchResultsTableView = new SearchResultsTableView({collection: searchCollection});
 
-//$(backButton).click(function() {
-//    toggleResults();
-//});
-//
-//$(centerButton).click(function() {
-//    if (graphView) {
-//        graphView.fit();
-//    }
-//});
-//
-//$(gridLayoutButton).click(function() {
-//    if (graphView) {
-//        graphView.layout('grid');
-//    }
-//});
-//
-//$(circleLayoutButton).click(function() {
-//    if (graphView) {
-//        graphView.layout('circle');
-//    }
-//});
+$(backButton).click(function() {
+    toggleResults();
+});
 
 function toggleResults() {
     if ($(graphResults).is(':visible')) {
         $(searchContent).show();
         $(searchResults).show();
-//        $(toolbar).hide();
+        $(toolbar).hide();
         $(graphResults).hide();
+        $('.' + cytoscapeResultsToolbar).hide();
     } else {
         $(searchContent).hide();
         $(searchResults).hide();
-//        $(toolbar).show();
+        $(toolbar).show();
         $(graphResults).show();
+        $('.' + cytoscapeResultsToolbar).show();
     }
 }

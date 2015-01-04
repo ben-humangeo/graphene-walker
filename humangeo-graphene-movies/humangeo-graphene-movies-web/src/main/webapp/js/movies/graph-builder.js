@@ -1,5 +1,6 @@
 /* GLOBALS */
-var cytoscapeResults = 'cytoscapeResults'
+var cytoscapeResults = 'cytoscapeResults';
+var cytoscapeResultsToolbar = 'cy-toolbar';
 
 // nulls
 var cytoscapeGraph;
@@ -124,70 +125,11 @@ GraphView = Backbone.View.extend({
 
             style: cytoscapeStyle,
 
-            elements: nodesAndEdges,
-
-//            style: [
-//                {
-//                    selector: 'node',
-//                    css: {
-//                        'content': 'data(name)',
-//                        'text-halign': 'center',
-//                        'text-valign': 'center',
-//                        'background-opacity': '0'
-//                    }
-//                },
-//
-//                {
-//                    selector: 'edge',
-//                    css: {
-//                        'target-arrow-shape': 'triangle'
-//                    }
-//                },
-//
-//                // custom classes
-//                {
-//                    selector: '.selected-node',
-//                    css: {
-//                        'border-color': '#f00',
-//                        'border-width': '2px'
-//                    }
-//                },
-//                {
-//                    selector: '.tool-node',
-//                    css: {
-//                        'font-family': 'FontAwesome',
-//                        'font-size': '3em',
-//                    }
-//                },
-//                {
-//                    selector: '.node-person',
-//                    css: {
-//                        'content': '\uf183'
-//                    }
-//                },
-//                {
-//                    selector: '.node-home',
-//                    css: {
-//                        'content': '\uf015'
-//                    }
-//                },
-//                {
-//                    selector: '.node-business',
-//                    css: {
-//                        'content': '\uf0f7'
-//                    }
-//                },
-//                {
-//                    selector: '.node-automobile',
-//                    css: {
-//                        'content': '\uf0d1'
-//                    }
-//                }
-//            ]
+            elements: nodesAndEdges
         });
 
         cytoscapeGraph.toolbar({
-            toolbarClass: "cy-toolbar",
+            toolbarClass: cytoscapeResultsToolbar,
             tools: [
                 [
                     {
@@ -281,7 +223,7 @@ GraphView = Backbone.View.extend({
                     {
                         icon: 'fa fa-dot-circle-o',
                         event: ['tap'],
-                        selector: 'node',
+                        selector: 'cy',
                         bubbleToCore: false,
                         tooltip: 'Fit Graph',
                         action: [self.fit]
