@@ -40,8 +40,7 @@ public class EntityServerRSImpl implements EntityServerRS {
 	@GET
 	@Path("/advancedSearch")
 	@Produces("application/json")
-	public EntitySearchResults advancedSearch(
-			@QueryParam("jsonSearch") String jsonSearch) {
+	public EntitySearchResults advancedSearch(@QueryParam("jsonSearch") String jsonSearch) {
 		TimeReporter t = new TimeReporter("advancedSearch", logger);
 
 		logger.trace("json search: " + jsonSearch);
