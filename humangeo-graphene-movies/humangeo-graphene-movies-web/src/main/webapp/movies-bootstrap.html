@@ -3,15 +3,20 @@
 <!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
 <!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
 <!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"><!--<![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Graphene Demo: Movies (Bootstrap)</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" href="layout/bootstrap.min.css"  rel="stylesheet" />
+    <link href="layout/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="font/css/font-awesome.css" rel="stylesheet" />
     <link type="text/css" href="layout/application.css" rel="stylesheet" />
 </head>
+
 <body>
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
@@ -27,19 +32,16 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="#">Movies<span class="sr-only">(current)</span></a></li>
-                <li><a href="#">Actors</a></li>
+                <li><a href="#">Movies<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="active"><a href="#">Actors</a>
+                </li>
             </ul>
         </div>
     </div>
 </nav>
-<div class="container">
-    <div class="row">
-        <div class="col-md-6 text-center col-md-offset-3 input-group">
-            <input id="queryInput" type="text" class="form-control" placeholder="Search for Entity">
-            <span id="querySearch" class="input-group-addon">?</span>
-        </div>
-    </div>
+<div id="contentWrapper" class="container">
+    <div id="content" class="container"></div>
 </div>
 <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
     <div class="container">
@@ -48,9 +50,99 @@
         </div>
     </div>
 </nav>
+
+<!-- TEMPLATES -->
+<script type="text/x-handlebars-template" id="search-template">
+    <div id="searchContent" class="row">
+        <div class="col-md-6 text-center col-md-offset-3 input-group">
+            <input id="queryInput" type="text" class="form-control" placeholder="Search for Entity">
+            <span id="querySearch" class="input-group-addon">?</span>
+        </div>
+    </div>
+    <!--
+    <div id="toolbar" class="row">
+        <div class="col-md-4">
+            <i id="backButton" class="bar-button fa fa-reply fa-2x" data-toggle="tooltip" data-placement="bottom" title="Back to search"></i>
+        </div>
+        <div class="col-md-4 text-center">
+            <i id="circleLayoutButton" class="bar-button fa fa-circle-o fa-2x" data-toggle="tooltip" data-placement="bottom" title="Circle Layout"></i>
+            <i id="gridLayoutButton" class="bar-button fa fa-th fa-2x" data-toggle="tooltip" data-placement="bottom" title="Grid Layout"></i>
+        </div>
+        <div class="col-md-4 text-right">
+            <i id="centerButton" class="bar-button fa fa-dot-circle-o fa-2x" data-toggle="tooltip" data-placement="bottom" title="Fit Graph"></i>
+        </div>
+    </div>
+    -->
+    <div id="searchResults"></div>
+    <div id="graphResults"></div>
+</script>
+
+<script type="text/x-handlebars-template" id="search-results-table-template">
+    <h3>Results for "{{query}}"</h3>
+    <table id="searchResultsTable" class="table table-hover col-md-12">
+        <tr>
+            <th>ID</th>
+            <th>Data Source</th>
+            <th>Name</th>
+        </tr>
+    </table>
+</script>
+
+<script type="text/x-handlebars-template" id="search-results-row-template">
+    <tr>
+        <td>{{ id }}</td>
+        <td>{{ datasource_id }}</td>
+        <td class="search-result-name"><a href="#{{ id }}">{{ effectiveName }}</a></td>
+    </tr>
+</script>
+
+<script type="text/x-handlebars-template" id="graph-results-cytoscape">
+    <div id="cytoscapeResults"></div>
+</script>
+<!-- END TEMPLATES -->
+
 </body>
+
 <script type="text/javascript" src="jquery/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="js/shared/bootstrap.min.js"></script>
-<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>-->
-<script type="text/javascript" src="application.js"></script>
+<script type="text/javascript" src="js/shared/underscore-min.js"></script>
+<script type="text/javascript" src="js/shared/handlebars.min.js"></script>
+<script type="text/javascript" src="js/shared/backbone-min.js"></script>
+<script type="text/javascript" src="js/shared/cytoscape.js"></script>
+<script type="text/javascript" src="js/shared/jquery.cytoscape.js-toolbar.js"></script>
+<script type="text/javascript" src="js/movies/search.js"></script>
+<script type="text/javascript" src="js/movies/graph-builder.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        // retrieve the string that follows the '#' in the url
+        var id = window.location.hash.substr(1);
+
+        // check to see if it exists
+        if (id) {
+            // create a new GraphBuilder from the id found in the url
+            var graphBuilder = new GraphBuilder({id: id});
+
+            // fetch the nodes and edges from the server for the id
+            graphBuilder.fetch({
+                success: function(model, response, options) {
+                    console.log('Fetch success');
+
+                    // empty the html for the graph
+                    $(graphResults).html('');
+
+                    // this method should already be loaded
+                    toggleResults();
+
+                    // create a new view for the graph
+                    graphView = new GraphView({model: model});
+                },
+                error: function(model, response, options) {
+                    console.log(response);
+                }
+            });
+        }
+    });
+</script>
+
 </html>

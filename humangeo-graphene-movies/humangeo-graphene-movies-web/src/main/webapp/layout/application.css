@@ -10,9 +10,43 @@
 */
 
 body {
-	padding: 70px 0;
+	padding-top: 70px; /* add padding to the top of the body for the fixed nav bar */
+}
+
+#contentWrapper {
+	position: relative; /* set the position to relative in order to use an absolute position later */
+}
+
+#content {
+	position: absolute; /* set the position to absolute to better position elements inside the content area */
+	width: 100%;
 }
 
 #querySearch {
-	cursor: pointer;
+	cursor: pointer; /* let the user see that it is a button */
+}
+
+#searchResults {
+	margin-top: 30px; /* set a margin for better aesthetics */
+}
+
+#graphResults {
+	height: 490px; /* set the height for the graph results area */
+	background-color: #fafafa; /* set the background color so that users can see where the graph area is located */
+	display: none; /* initially hide the graph area */
+}
+
+/* let the cytoscape graph take up the entire available space */
+#cytoscapeResults {
+	width: 100%;
+	height: 100%;
+}
+
+#toolbar {
+	display: none; /* hide the toolbar */
+}
+
+.bar-button {
+	cursor: pointer; /* make each tool be button-esque */
+	margin-right: 5px; /* create spacing for aesthetics */
 }
